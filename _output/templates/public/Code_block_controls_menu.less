@@ -1,0 +1,29 @@
+.bbCodeBlock--code .bbCodeBlock-title-opposite
+{
+	float: right;
+
+	.icon-button
+	{
+		padding: 0 .5em;
+		
+		&:last-of-type
+		{
+			padding-right: 0;
+		}
+		
+		color: @xf-textColorMuted;
+		transition: color .2s;
+		
+		&:hover
+		{
+			cursor: pointer;
+			color: @xf-textColorDimmed;
+		}
+		
+		&:active
+		{
+			transition: color 0s;
+			color: @xf-textColorAttention;
+		}
+	}
+}

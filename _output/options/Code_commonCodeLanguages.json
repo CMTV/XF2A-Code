@@ -1,0 +1,12 @@
+{
+    "edit_format": "textbox",
+    "edit_format_params": "rows=5",
+    "data_type": "string",
+    "sub_options": [],
+    "validation_class": "",
+    "validation_method": "",
+    "default_value": "css\nhtml\njavascript\nphp",
+    "relations": {
+        "messageOptions": 820
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "template": "editor_dialog_code",
+    "description": "Removing \"editor_code_type\" id from <select> tag",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:selectrow id=\"editor_code_type\"",
+    "replace": "<xf:selectrow"
+}

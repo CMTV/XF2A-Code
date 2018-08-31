@@ -1,0 +1,98 @@
+{
+    "Code_collapse.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "355025b24faf9795a356862e9d602d02"
+    },
+    "Code_copied.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "6d6db52799620de23c1e87d00abde8c4"
+    },
+    "Code_copy_to_clipboard.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "a612782072a3b8f151c5e2120ef20efd"
+    },
+    "Code_editor_title.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "78231796dc2b22b4270d96adbee838ef"
+    },
+    "Code_editor_title_explain.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "345071cd88b1fcc90a2fad708bebf5bf"
+    },
+    "Code_expand.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "e942b25f6e92a3222c501cec56fb402c"
+    },
+    "option.Code_commonCodeLanguages.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "46e1790aaf2862fc625b4f225ae5f386"
+    },
+    "option_explain.Code_commonCodeLanguages.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "27aee8b1e52b5015c858f3b27363d3a0"
+    },
+    "style_prop.Code_codeBlockHeightDefault.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "d86574fea9a76f7908e0c1493cb0b229"
+    },
+    "style_prop.Code_showLineNumbers.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "68379f916c7ed8dd3ab30adaa20635fe"
+    },
+    "style_prop.Code_style_type.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "e87196a1676c587957a43306a3144675"
+    },
+    "style_prop_desc.Code_codeBlockHeightDefault.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "style_prop_desc.Code_showLineNumbers.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "105047f23949ab4b2f331772c357128c"
+    },
+    "style_prop_desc.Code_style_type.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "b054090fc17c1af518c14393fab85d7f"
+    },
+    "style_prop_group.Code.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "ca0dbad92a874b2f69b549293387925e"
+    },
+    "style_prop_group_desc.Code.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "7f27168546e2e0e355504d774b9617ab"
+    }
+}

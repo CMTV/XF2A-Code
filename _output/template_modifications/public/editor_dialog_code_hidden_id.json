@@ -1,0 +1,9 @@
+{
+    "template": "editor_dialog_code",
+    "description": "Adding \"Code block title\" input field",
+    "execution_order": 15,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<div class=\"block-body\" data-xf-init=\"code-editor-switcher-container\">",
+    "replace": "$0\n\n<input data-xf-init=\"Code-insert-watcher\" type=\"hidden\" id=\"editor_code_type\" />\n\n<xf:textboxrow id=\"editor_code_title\"\n\t\t\t   label=\"{{ phrase('Code_editor_title') }}\"\n\t\t\t   explain=\"{{ phrase('Code_editor_title_explain') }}\" />"
+}

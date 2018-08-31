@@ -1,0 +1,9 @@
+{
+    "template": "bb_code_tag_code",
+    "description": "Replacing language name with custom header (if specified)",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/(<div class=\"bbCodeBlock-title\">)([\\s\\S]+?)(<\\/div>)/m",
+    "replace": "$1\n\n<xf:if is=\"{$config.Code_filename}\">\n\t<span title=\"{{phrase('language')}}: {{ $config.phrase ?: phrase('code') }}\">\n\t\t{$config.Code_filename}{$xf.language.label_separator}\n\t</span>\n<xf:else />\n\t$2\n</xf:if>\n\n$3"
+}

@@ -1,0 +1,13 @@
+{
+    "group_name": "Code",
+    "title": "Code style type",
+    "description": "This defines the code highlighting colors for light/dark forum styles.",
+    "property_type": "value",
+    "css_components": [],
+    "value_type": "radio",
+    "value_parameters": "light={{ phrase('light') }}\ndark={{ phrase('dark') }}",
+    "depends_on": "",
+    "value_group": "",
+    "property_value": "light",
+    "display_order": 0
+}

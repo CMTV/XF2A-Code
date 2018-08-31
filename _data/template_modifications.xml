@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="bb_code_tag_code" modification_key="bb_code_tag_code_opposite_menu" description="Adding code buttons menu at right" execution_order="15" enabled="1" action="preg_replace">
+    <find><![CDATA[/(<div class="bbCodeBlock-title">)([\s\S]+?)(<\/div>)/m]]></find>
+    <replace><![CDATA[$1$2 <xf:macro template="Code_block_macro" name="opposite_menu" /> $3]]></replace>
+  </modification>
+  <modification type="public" template="bb_code_tag_code" modification_key="bb_code_tag_code_resizer" description="Adding resizer bar below code blocker" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<div class="bbCodeBlock-content" dir="ltr">[\s\S]+?<\/div>/m]]></find>
+    <replace><![CDATA[$0
+
+<xf:macro template="Code_block_macro" name="resizer_bar" />]]></replace>
+  </modification>
+  <modification type="public" template="bb_code_tag_code" modification_key="bb_code_tag_code_init" description="Adding code block controllers" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[bbCodeBlock--code"]]></find>
+    <replace><![CDATA[$0 data-xf-init="Code-block"]]></replace>
+  </modification>
+  <modification type="public" template="bb_code_tag_code" modification_key="bb_code_tag_code_filename" description="Replacing language name with custom header (if specified)" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/(<div class="bbCodeBlock-title">)([\s\S]+?)(<\/div>)/m]]></find>
+    <replace><![CDATA[$1
+
+<xf:if is="{$config.Code_filename}">
+	<span title="{{phrase('language')}}: {{ $config.phrase ?: phrase('code') }}">
+		{$config.Code_filename}{$xf.language.label_separator}
+	</span>
+<xf:else />
+	$2
+</xf:if>
+
+$3]]></replace>
+  </modification>
+  <modification type="public" template="bb_code_tag_code" modification_key="bb_code_tag_code_line_numbers_class" description="Adding &quot;line-numbers&quot; class to &lt;pre&gt; tag" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="{{ $language ?: '' }}"><code>{$content}</code></pre>]]></find>
+    <replace><![CDATA[<xf:if is="{{ $config.phrase ?: phrase('code') }} == {{ phrase('code') }}">
+	<pre class="bbCodeCode line-numbers" dir="ltr" data-xf-init="code-block" data-lang="{{ $language ?: 'code' }}"><code class=" language-general">{$content}</code></pre>
+<xf:else />
+	<pre class="bbCodeCode line-numbers" dir="ltr" data-xf-init="code-block" data-lang="{{ $language ?: '' }}"><code>{$content}</code></pre>
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="editor_dialog_code" modification_key="editor_dialog_code_remove_id" description="Removing &quot;editor_code_type&quot; id from &lt;select&gt; tag" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:selectrow id="editor_code_type"]]></find>
+    <replace><![CDATA[<xf:selectrow]]></replace>
+  </modification>
+  <modification type="public" template="editor_dialog_code" modification_key="editor_dialog_code_hidden_id" description="Adding &quot;Code block title&quot; input field" execution_order="15" enabled="1" action="str_replace">
+    <find><![CDATA[<div class="block-body" data-xf-init="code-editor-switcher-container">]]></find>
+    <replace><![CDATA[$0
+
+<input data-xf-init="Code-insert-watcher" type="hidden" id="editor_code_type" />
+
+<xf:textboxrow id="editor_code_title"
+			   label="{{ phrase('Code_editor_title') }}"
+			   explain="{{ phrase('Code_editor_title_explain') }}" />]]></replace>
+  </modification>
+  <modification type="public" template="helper_js_global" modification_key="helper_js_global_styles" description="Including addon styles" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--XF:CSS-->]]></find>
+    <replace><![CDATA[$0
+
+<xf:include template="Code_styles" />]]></replace>
+  </modification>
+  <modification type="public" template="helper_js_global" modification_key="helper_js_global_scripts" description="Including addon scripts" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--XF:JS-->]]></find>
+    <replace><![CDATA[$0
+
+<xf:include template="Code_js" />]]></replace>
+  </modification>
+  <modification type="public" template="helper_js_global" modification_key="helper_js_global_phrases" description="Registering addon phrases" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:js_global:xf_phrase_start]-->]]></find>
+    <replace><![CDATA[$0
+
+Code_copied: "{{ phrase('Code_copied') }}",]]></replace>
+  </modification>
+  <modification type="public" template="prism_macros" modification_key="prism_macros_line_numbers" description="Adding &quot;Line numbers&quot; PrismJS addon" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:js prod="xf/code_block-compiled.js" dev="vendor/prism/prism.min.js, xf/code_block.js" />]]></find>
+    <replace><![CDATA[$0
+
+<xf:if is="{{ property('Code_showLineNumbers') }}">
+	<xf:js src="Code/PrismJS-plugins/line-numbers.js" addon="Code" />
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="prism_macros" modification_key="prism_macros_code_styles" description="Adding code highlighting support for light/dark forum styles" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:css src="bb_code.less" />]]></find>
+    <replace><![CDATA[$0
+
+<xf:if is="{{ property('Code_style_type') === 'light' }}">
+	<xf:css src="Code_style_light.less" />
+<xf:else />
+	<xf:css src="Code_style_dark.less" />
+</xf:if>]]></replace>
+  </modification>
+</template_modifications>

@@ -1,0 +1,9 @@
+{
+    "template": "bb_code_tag_code",
+    "description": "Adding code buttons menu at right",
+    "execution_order": 15,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/(<div class=\"bbCodeBlock-title\">)([\\s\\S]+?)(<\\/div>)/m",
+    "replace": "$1$2 <xf:macro template=\"Code_block_macro\" name=\"opposite_menu\" /> $3"
+}

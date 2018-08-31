@@ -1,0 +1,38 @@
+{
+    "public/bb_code_tag_code_filename.json": {
+        "hash": "7cc96360d1053d13a4ddd466c827b1b0"
+    },
+    "public/bb_code_tag_code_init.json": {
+        "hash": "1263cce1a4f8df715241a951f6d74f5f"
+    },
+    "public/bb_code_tag_code_line_numbers_class.json": {
+        "hash": "acaff6946f13571798be545c8f2be08c"
+    },
+    "public/bb_code_tag_code_opposite_menu.json": {
+        "hash": "262c9a955817f43b32344d7041be4bdf"
+    },
+    "public/bb_code_tag_code_resizer.json": {
+        "hash": "708c1e0d77808b19812f8984b4a44293"
+    },
+    "public/editor_dialog_code_hidden_id.json": {
+        "hash": "52d64971a49c6509412627887381913a"
+    },
+    "public/editor_dialog_code_remove_id.json": {
+        "hash": "88fa9e7f6c883e8e34a7ea98e66eb5f2"
+    },
+    "public/helper_js_global_phrases.json": {
+        "hash": "1ed6abd51d286f5c34d0f992140cc5b9"
+    },
+    "public/helper_js_global_scripts.json": {
+        "hash": "9516831d15824ff14e3a75e6d460654c"
+    },
+    "public/helper_js_global_styles.json": {
+        "hash": "09179a7ec53349746aa479379cb98ef4"
+    },
+    "public/prism_macros_code_styles.json": {
+        "hash": "60118d3ebaf42b19cc968f21d6787b19"
+    },
+    "public/prism_macros_line_numbers.json": {
+        "hash": "3f7e09ed2a5bd1a5869ecb093ea3459b"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "additional_files": [
+        "js/Code"
+    ],
+    
+    "minify": [
+        "js/Code/code-block.js",
+        "js/Code/code-block-buttons.js",
+        "js/Code/code-block-copy.js",
+        "js/Code/code-block-resizer.js",
+        "js/Code/insert-code-editor.js"
+    ]
+}

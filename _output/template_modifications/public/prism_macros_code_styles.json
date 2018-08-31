@@ -1,0 +1,9 @@
+{
+    "template": "prism_macros",
+    "description": "Adding code highlighting support for light/dark forum styles",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:css src=\"bb_code.less\" />",
+    "replace": "$0\n\n<xf:if is=\"{{ property('Code_style_type') === 'light' }}\">\n\t<xf:css src=\"Code_style_light.less\" />\n<xf:else />\n\t<xf:css src=\"Code_style_dark.less\" />\n</xf:if>"
+}

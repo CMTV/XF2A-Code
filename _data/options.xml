@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="Code_commonCodeLanguages" edit_format="textbox" data_type="string">
+    <default_value>css
+html
+javascript
+php</default_value>
+    <edit_format_params>rows=5</edit_format_params>
+    <relation group_id="messageOptions" display_order="820"/>
+  </option>
+</options>
