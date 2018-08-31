@@ -8,4 +8,8 @@ php</default_value>
     <edit_format_params>rows=5</edit_format_params>
     <relation group_id="messageOptions" display_order="820"/>
   </option>
+  <option option_id="Code_defaultCodeLanguage" edit_format="textbox" data_type="string">
+    <default_value></default_value>
+    <relation group_id="messageOptions" display_order="830"/>
+  </option>
 </options>

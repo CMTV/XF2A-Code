@@ -14,6 +14,9 @@
     "public/bb_code_tag_code_resizer.json": {
         "hash": "708c1e0d77808b19812f8984b4a44293"
     },
+    "public/editor_dialog_code_default_code_language.json": {
+        "hash": "8d77eb393de406f95a144e9ff527f1c8"
+    },
     "public/editor_dialog_code_hidden_id.json": {
         "hash": "52d64971a49c6509412627887381913a"
     },

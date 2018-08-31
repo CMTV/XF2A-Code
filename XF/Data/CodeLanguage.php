@@ -17,6 +17,13 @@ class CodeLanguage extends XFCP_CodeLanguage
             }
         }
 
+        $defaultCodeLanguage = \XF::options()->Code_defaultCodeLanguage;
+
+        if (array_key_exists($defaultCodeLanguage, $languages))
+        {
+            $languages[$defaultCodeLanguage]['Code_default_language'] = true;
+        }
+
         foreach ($commonLanguages as $commonLanguage)
         {
             if (array_key_exists($commonLanguage, $languages))

@@ -7,7 +7,9 @@
   <phrase title="Code_editor_title_explain" version_id="1000070" version_string="1.0.0"><![CDATA[Optional. If specified, the default code language name will be replaced with title text at code block header. For example, can be used for specifying filename.]]></phrase>
   <phrase title="Code_expand" version_id="1000070" version_string="1.0.0"><![CDATA[Expand code]]></phrase>
   <phrase title="option.Code_commonCodeLanguages" version_id="1000070" version_string="1.0.0"><![CDATA[Common code BB code block languages]]></phrase>
+  <phrase title="option.Code_defaultCodeLanguage" version_id="1000070" version_string="1.0.0"><![CDATA[Default code language]]></phrase>
   <phrase title="option_explain.Code_commonCodeLanguages" version_id="1000070" version_string="1.0.0"><![CDATA[The languages listed here will be displayed in "Common languages" block in language selector.]]></phrase>
+  <phrase title="option_explain.Code_defaultCodeLanguage" version_id="1000070" version_string="1.0.0"><![CDATA[This language will be automatically selected when "Insert code" dialog opens.]]></phrase>
   <phrase title="style_prop.Code_codeBlockHeightDefault" version_id="1000070" version_string="1.0.0"><![CDATA[Code block default height]]></phrase>
   <phrase title="style_prop.Code_showLineNumbers" version_id="1000070" version_string="1.0.0"><![CDATA[Show line numbers]]></phrase>
   <phrase title="style_prop.Code_style_type" version_id="1000070" version_string="1.0.0"><![CDATA[Code style type]]></phrase>

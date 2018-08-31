@@ -41,11 +41,23 @@
         "version_string": "1.0.0",
         "hash": "46e1790aaf2862fc625b4f225ae5f386"
     },
+    "option.Code_defaultCodeLanguage.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "af1c1800beb7826cc21daa3a470c41eb"
+    },
     "option_explain.Code_commonCodeLanguages.txt": {
         "global_cache": false,
         "version_id": 1000070,
         "version_string": "1.0.0",
         "hash": "27aee8b1e52b5015c858f3b27363d3a0"
+    },
+    "option_explain.Code_defaultCodeLanguage.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "b6c0c11831f55f7a77a15603df789abb"
     },
     "style_prop.Code_codeBlockHeightDefault.txt": {
         "global_cache": false,

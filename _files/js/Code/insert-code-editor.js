@@ -28,10 +28,33 @@ var XFAddon_Code = window.XFAddon_Code || {};
             this.$title.on('input', $.proxy(this.makeCodeType, this));
             this.$select.on('change', $.proxy(this.makeCodeType, this));
 
+            var inited = false;
+
+            this.$target.onWithin('overlay:showing', $.proxy(function() {
+                if (inited)
+                {
+                    this.$dialog.find('[data-xf-init="code-editor"]').data('lang', '');
+                    this.initCodeMirror();
+                }
+            }, this));
+
+            this.$target.parent().on('code-editor:init', $.proxy(function() {
+                this.initCodeMirror();
+                inited = true;
+            }, this));
+
             this.$dialog.submit($.proxy(function() {
                 this.makeCodeType();
                 this.$title.val('');
             }, this));
+        },
+
+        initCodeMirror: function()
+        {
+            if (this.$select.val().length !== 0)
+            {
+                XF.Element.getHandler(this.$target.parent(), 'code-editor-switcher-container').switchLanguage(this.$select.val());
+            }
         },
 
         overrideInsertCode: function()
@@ -40,6 +63,11 @@ var XFAddon_Code = window.XFAddon_Code || {};
 
             XF.EditorHelpers.insertCode = function(ed, type, code)
             {
+                if (type.length !== 0)
+                {
+                    type = '"' + type + '"';
+                }
+
                 var oldType = type;
 
                 type = new String(type);
@@ -62,7 +90,7 @@ var XFAddon_Code = window.XFAddon_Code || {};
         {
             if (this.$title.val().length !== 0)
             {
-                this.$target.val(this.$select.val() + '|' + (this.$title.val()).replace(/[^\w\s.]/gi, ''));
+                this.$target.val(this.$select.val() + '|' + this.$title.val());
             }
             else
             {

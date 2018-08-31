@@ -18,6 +18,7 @@ var XFAddon_Code = window.XFAddon_Code || {};
                 if (!this.$target.is(':hidden'))
                 {
                     this.$target.on('mousedown', XF.proxy(this, 'initResize'));
+                    this.$target.on('touchstart', XF.proxy(this, 'initTouchResize'));
                 }
             }, this));
         },
@@ -33,6 +34,18 @@ var XFAddon_Code = window.XFAddon_Code || {};
             window.addEventListener('mouseup', this, false);
         },
 
+        initTouchResize: function(e)
+        {
+            this.onResizePos =
+                e.touches[0].pageY - this.codeBlockHandler.codeBlockParts.$content.offset().top - this.codeBlockHandler.codeBlockParts.$content.outerHeight();
+
+
+            $('body').addClass('Code-resizing');
+
+            window.addEventListener('touchmove', this,  { passive: false });
+            window.addEventListener('touchend', this,  { passive: false });
+        },
+
         handleEvent: function(e)
         {
             switch (e.type)
@@ -40,9 +53,16 @@ var XFAddon_Code = window.XFAddon_Code || {};
                 case 'mousemove':
                     this.resize(e);
                     break;
+                case 'touchmove':
+                    this.touchResize(e);
+                    break;
                 case 'mouseup':
+                case 'touchend':
                     window.removeEventListener('mousemove', this, false);
                     window.removeEventListener('mouseup', this, false);
+
+                    window.removeEventListener('touchmove', this,  { passive: false });
+                    window.removeEventListener('touchend', this,  { passive: false });
 
                     if (this.codeBlockHandler.codeBlockParts.$content.height() > this.codeBlockHandler.contentHeight)
                     {
@@ -75,6 +95,16 @@ var XFAddon_Code = window.XFAddon_Code || {};
 
             this.codeBlockHandler.codeBlockParts.$content.get(0).style.height =
                 e.pageY - contentTop - this.onResizePos + 'px';
+        },
+
+        touchResize: function(e)
+        {
+            e.preventDefault();
+
+            var contentTop = this.codeBlockHandler.codeBlockParts.$content.offset().top;
+
+            this.codeBlockHandler.codeBlockParts.$content.get(0).style.height =
+                e.touches[0].pageY - contentTop - this.onResizePos + 'px';
         }
     });
 
