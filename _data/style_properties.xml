@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style_properties>
-  <style_property property_name="Code_codeBlockHeightDefault" group_name="Code" title="Code block default height" property_type="value" value_type="unit" value_group="codeBlockHeight" display_order="10">
-    <value>"250px"</value>
-  </style_property>
-  <style_property property_name="Code_showLineNumbers" group_name="Code" title="Show line numbers" description="If enabled, code line numbers will be showing at the left of code block." property_type="value" value_type="boolean" display_order="20">
-    <value>1</value>
-  </style_property>
-  <style_property property_name="Code_style_type" group_name="Code" title="Code style type" description="This defines the code highlighting colors for light/dark forum styles." property_type="value" value_type="radio" display_order="0">
-    <value_parameters>light={{ phrase('light') }}
-dark={{ phrase('dark') }}</value_parameters>
-    <value>"light"</value>
+  <style_property property_name="CMTV_Code_code_block_max_height" group_name="bbCode" title="Code block max height" property_type="value" value_type="unit" value_group="CMTV_Code_bbCodeCodeBlock" display_order="200">
+    <value_parameters>px</value_parameters>
+    <value>"300px"</value>
   </style_property>
 </style_properties>

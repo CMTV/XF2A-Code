@@ -1,0 +1,9 @@
+{
+    "template": "helper_js_global",
+    "description": "Passing \"Copied\" phrase to JS scripts",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "// <!--[XF:js_global:xf_phrase_start]-->",
+    "replace": "$0\n\nCMTV_Code_copied: \"{{ phrase('CMTV_Code_copied')|escape('js') }}\","
+}

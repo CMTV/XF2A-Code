@@ -1,0 +1,1 @@
+If enabled, code blocks from old addon versions <code>[code=title|lang]...[/code]</code> will be treated as <code>[code lang="lang" title="title"]...[/code]</code>.

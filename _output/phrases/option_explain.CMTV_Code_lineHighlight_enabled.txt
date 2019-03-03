@@ -1,0 +1,1 @@
+If enabled, users will be able to highlight specific lines and/or line ranges in code blocks. <a href="https://prismjs.com/plugins/line-highlight/" target="_blank">Plugin page</a>

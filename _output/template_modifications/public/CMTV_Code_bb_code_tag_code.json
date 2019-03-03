@@ -1,0 +1,9 @@
+{
+    "template": "bb_code_tag_code",
+    "description": "Custom template",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/[\\s\\S]+/",
+    "replace": "<xf:include template=\"CMTV_Code_bb_code_tag_code\" />"
+}

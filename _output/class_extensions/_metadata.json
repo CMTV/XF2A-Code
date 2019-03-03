@@ -1,8 +1,8 @@
 {
-    "XF-BbCode-Renderer-Html_Code-XF-BbCode-Renderer-Html.json": {
-        "hash": "fdecbcd005c889838408d1f22cefe536"
+    "XF-BbCode-Renderer-Html_CMTV-Code-XF-BbCode-Renderer-Html.json": {
+        "hash": "74746c3c7fbe93ad045c5ed71d4b9114"
     },
-    "XF-Data-CodeLanguage_Code-XF-Data-CodeLanguage.json": {
-        "hash": "8a308b3fc35f428f3b48f7e0942a0430"
+    "XF-BbCode-RuleSet_CMTV-Code-XF-BbCode-RuleSet.json": {
+        "hash": "5b990036fd242d5b99b4dec3aa6e9f61"
     }
 }

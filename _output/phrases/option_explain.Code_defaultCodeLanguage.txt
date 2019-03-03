@@ -1,1 +1,0 @@
-This language will be automatically selected when "Insert code" dialog opens.

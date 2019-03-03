@@ -1,166 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates>
-  <template type="public" title="Code_block.less" version_id="1000070" version_string="1.0.0"><![CDATA[.bbCodeBlock.bbCodeBlock--code
-{
-	.bbCodeBlock-content
-	{
-		resize: none;
-		max-height: @xf-Code_codeBlockHeightDefault;	
-	}
-}
+  <template type="public" title="CMTV_Code_Prism_plugins.less" version_id="2010070" version_string="2.1.0"><![CDATA[// ############################ Line numbers ############################
 
-.bbCodeBlock--code
-{	
-	//
-	// Styling scrollbars
-	//
-
-	.bbCodeBlock-content
-	{
-		&::-webkit-scrollbar
-		{
-			width: 0.9em;
-			height: 0.9em;
-		}
-
-		&::-webkit-scrollbar-track {
-			background: transparent;
-		}
-
-		&::-webkit-scrollbar-thumb
-		{		
-			background-color: fade(@xf-borderColor, 60%);
-			border: 1px solid @xf-borderColor;
-
-			&:vertical
-			{
-				border-right: 0;	
-			}
-
-			&:horizontal
-			{
-				border-bottom: 0;
-			}
-
-			&:hover
-			{
-				background-color: @xf-borderColor;
-			}
-		}
-
-		&::-webkit-scrollbar-corner
-		{
-			background-color: fade(@xf-borderColor, 60%);
-		}
-	}
-}
-
-//
-// Code block resizer
-//
-
-.bbCodeBlock-resizer
-{
-	border-top: 1px solid @xf-borderColorLight;
-
-	display: none;
-	align-items: center;
-	justify-content: center;
-
-	height: 1.25em;
-
-	background: xf-diminish(@xf-contentAltBg, 2%);
-
-	&:hover
-	{
-		cursor: ns-resize;
-		
-		.grip-handle:after
-		{
-			color: @xf-textColorDimmed;
-		}
-	}
-
-	.grip-handle:after
-	{
-		font-family: "FontAwesome";
-		content: "\f142 \f142 \f142 \f142";
-		letter-spacing: 0.1em;
-
-		color: @xf-textColorMuted;
-		transition: color .2s;
-
-		font-size: 95%;
-		vertical-align: middle;
-	}
-}
-
-body.Code-resizing
-{
-	cursor: ns-resize !important;
-}]]></template>
-  <template type="public" title="Code_block_controls_menu.less" version_id="1000070" version_string="1.0.0"><![CDATA[.bbCodeBlock--code .bbCodeBlock-title-opposite
-{
-	float: right;
-
-	.icon-button
-	{
-		padding: 0 .5em;
-		
-		&:last-of-type
-		{
-			padding-right: 0;
-		}
-		
-		color: @xf-textColorMuted;
-		transition: color .2s;
-		
-		&:hover
-		{
-			cursor: pointer;
-			color: @xf-textColorDimmed;
-		}
-		
-		&:active
-		{
-			transition: color 0s;
-			color: @xf-textColorAttention;
-		}
-	}
-}]]></template>
-  <template type="public" title="Code_block_macro" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:macro name="opposite_menu">
-	<div class="bbCodeBlock-title-opposite">
-		<span class="icon-button expand"
-			  data-xf-init="tooltip" data-original-title="{{ phrase('Code_expand') }}"
-			  data-xf-click="Code-expand">
-			<i class="fa fa-expand"></i>	
-		</span>
-		
-		<span class="icon-button collapse"
-			  data-xf-init="tooltip" data-original-title="{{ phrase('Code_collapse') }}"
-			  data-xf-click="Code-collapse">
-			<i class="fa fa-compress"></i>
-		</span>
-
-		<span class="icon-button copy-to-clipboard"
-			  data-xf-init="tooltip" data-original-title="{{ phrase('Code_copy_to_clipboard') }}">
-			<i class="fa fa-clipboard"></i>	
-		</span>
-	</div>
-</xf:macro>
-
-<xf:macro name="resizer_bar">
-	<div data-xf-init="Code-resizer" class="bbCodeBlock-resizer">
-		<span class="grip-handle"></span>
-	</div>
-</xf:macro>]]></template>
-  <template type="public" title="Code_js" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:js prod="Code/code-block.min.js" dev="Code/code-block.js" addon="Code" />
-<xf:js prod="Code/code-block-resizer.min.js" dev="Code/code-block-resizer.js" addon="Code" />
-<xf:js prod="Code/code-block-copy.min.js" dev="Code/code-block-copy.js" addon="Code" />
-<xf:js prod="Code/code-block-buttons.min.js" dev="Code/code-block-buttons.js" addon="Code" />
-
-<xf:js prod="Code/insert-code-editor.min.js" dev="Code/insert-code-editor.js" addon="Code" />]]></template>
-  <template type="public" title="Code_line_numbers.less" version_id="1000070" version_string="1.0.0"><![CDATA[pre[class*="language-"].line-numbers {
+pre[class*="language-"].line-numbers {
 	position: relative;
 	padding-left: 2.8em;
 	counter-reset: linenumber;
@@ -176,10 +18,10 @@ pre[class*="language-"].line-numbers > code {
 	pointer-events: none;
 	top: 0;
 	font-size: 100%;
-	left: -2.8em;
-	width: 2em;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
 	letter-spacing: -1px;
-	border-right: 1px solid @xf-borderColorLight;
+	border-right: 1px solid @xf-borderColor;
 
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -188,262 +30,188 @@ pre[class*="language-"].line-numbers > code {
 
 }
 
-.line-numbers-rows > span {
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: @xf-textColorMuted;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+
+// ############################ Line highlight ############################
+
+pre[data-line] {
+	position: relative;
+	//padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	//margin-top: 1em; /* Same as .prism’s padding-top */
+
+	background: fade(@xf-paletteAccent2, 8%);
+	//background: linear-gradient(to right, fade(@xf-paletteAccent2, 10%) 70%, fade(@xf-paletteAccent2, 0%));
+
 	pointer-events: none;
-	display: block;
-	counter-increment: linenumber;
+
+	line-height: inherit;
+	white-space: pre;
 }
 
-.line-numbers-rows > span:before {
-	content: counter(linenumber);
-	color: @xf-textColorMuted;
-	display: block;
-	padding-right: 0.8em;
-	text-align: right;
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+	content: none;
 }]]></template>
-  <template type="public" title="Code_style_dark.less" version_id="1000070" version_string="1.0.0"><![CDATA[.bbCodeCode code
-{	
-	.prism-token
-	{		
-		&.prism-comment,
-		&.prism-prolog,
-		&.prism-doctype,
-		&.prism-cdata {
-			color: slategray;
-		}
+  <template type="public" title="CMTV_Code_bb_code_tag_code" version_id="2010070" version_string="2.1.0"><![CDATA[<xf:macro template="prism_macros" name="setup" />
 
-		&.prism-punctuation {
-			color: #999;
-		}
+<xf:css src="CMTV_Code_code_block.less" />
 
-		.namespace {
-			opacity: .7;
-		}
+<xf:js src="CMTV/Code/code-block.js" min="1" addon="CMTV/Code" />
+<xf:js src="CMTV/Code/code-block-actions.js" min="1" addon="CMTV/Code" />
+<xf:js src="CMTV/Code/code-block-resizer.js" min="1" addon="CMTV/Code" />
 
-		&.prism-property,
-		&.prism-tag,
-		&.prism-boolean,
-		&.prism-number,
-		&.prism-constant,
-		&.prism-symbol,
-		&.prism-deleted {
-			color: #13edef;
-		}
-
-		&.prism-selector,
-		&.prism-attr-name,
-		&.prism-string,
-		&.prism-char,
-		&.prism-builtin,
-		&.prism-inserted {
-			color: #690;
-		}
-
-		&.prism-operator,
-		&.prism-entity,
-		&.prism-url,
-		.language-css &.prism-string,
-		.style &.prism-string {
-			color: #a67f59;
-		}
-
-		&.prism-atrule,
-		&.prism-attr-value,
-		&.prism-keyword {
-			color: #07a;
-		}
-
-		&.prism-function,
-		&.prism-class-name {
-			color: #DD4A68;
-		}
-
-		&.prism-regex,
-		&.prism-important,
-		&.prism-variable {
-			color: #e90;
-		}
-
-		&.prism-important,
-		&.prism-bold {
-			font-weight: bold;
-		}
-		&.prism-italic {
-			font-style: italic;
-		}
-
-		&.prism-entity {
-			cursor: help;
-		}
-	}
-}
-
-//
-// CodeMirror dark style
-//
-.codeEditor
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code {{ $language ? 'language-' . $language : 'noLang' }} {{ $options.class }}"
+	 data-xf-init="CMTV-code-block">
+	
+	<div class="bbCodeBlock-header">
+		<div class="bbCodeBlock-title">
+			<span title="{{ $options.title ? $config.phrase ?: phrase('code') : '' }}">
+				{{ $options.title ?: $config.phrase ?: phrase('code') }}{$xf.language.label_separator}
+			</span>
+		</div>
+		
+		<div class="bbCodeBlock-actions">
+			<xf:fa icon="fa-expand-alt" title="{{ phrase('CMTV_Code_expand') }}" class="action action--expand action--hidden" 
+				   data-xf-init="tooltip" data-xf-click="CMTV-code-block-expand" />
+			
+			<xf:fa icon="fa-compress-alt" title="{{ phrase('CMTV_Code_collapse') }}" class="action action--collapse action--hidden" 
+				   data-xf-init="tooltip" data-xf-click="CMTV-code-block-collapse" />
+			
+			<xf:fa icon="fa-paste" title="{{ phrase('CMTV_Code_copy') }}" class="action action--copy" 
+				   data-xf-init="tooltip" />
+		</div>
+	</div>
+	
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode {{ $xf.options.CMTV_Code_lineNumbers_enabled ? 'line-numbers' . (!$language ? ' language-none' : '') : ''  }}" dir="ltr" data-line="{$options.highlight}" data-xf-init="CMTV-code-block-extend" data-lang="{{ $language ?: '' }}"><code>{$content}</code></pre>
+	</div>
+	
+	<div class="bbCodeBlock-grip resizer--hidden" data-xf-init="CMTV-code-block-resizer">
+		<xf:fa icon="fa-grip-horizontal" />
+	</div>
+</div>]]></template>
+  <template type="public" title="CMTV_Code_code_block.less" version_id="2010070" version_string="2.1.0"><![CDATA[body.CMTV_Code_resizing *
 {
-	.CodeMirror
-	{
-		color: @xf-textColor;
-	}
-
-	.CodeMirror-scrollbar-filler,
-	.CodeMirror-gutter-filler
-	{
-		background-color: black; /* The little square between H and V scrollbars */
-	}
-
-	.CodeMirror-gutters {
-		border-right: 1px solid #222222;
-		background-color: @xf-pageBg;
-	}
-
-	.CodeMirror-linenumber {
-		color: #666666;
-	}
-
-	.CodeMirror-cursor {
-		border-left: 1px solid @xf-textColor;
-	}
-
-	.CodeMirror-selected { background: rgba(255, 255, 255, 0.10); }
-	.CodeMirror-focused .CodeMirror-selected { background: rgba(255, 255, 255, 0.10); }
-
-	.CodeMirror-line::selection, .cm-s-default .CodeMirror-line > span::selection, .cm-s-default .CodeMirror-line > span > span::selection { background: rgba(255, 255, 255, 0.10); }
-	.CodeMirror-line::-moz-selection, .cm-s-default .CodeMirror-line > span::-moz-selection, .cm-s-default .CodeMirror-line > span > span::-moz-selection { background: rgba(255, 255, 255, 0.10); }
-
-	.CodeMirror-simplescroll-horizontal div, .CodeMirror-simplescroll-vertical div {
-		background: #333333;
-		border: 1px solid #444444;
-	}
-
-	.CodeMirror-simplescroll-horizontal, .CodeMirror-simplescroll-vertical {
-		background: #111111;
-	}
+	cursor: ns-resize !important;
 }
 
-.cm-s-default span.cm-comment { color: #6272a4; }
-.cm-s-default span.cm-string, .cm-s-default span.cm-string-2 { color: #f1fa8c; }
-.cm-s-default span.cm-number { color: #bd93f9; }
-.cm-s-default span.cm-variable { color: #50fa7b; }
-.cm-s-default span.cm-variable-2 { color: white; }
-.cm-s-default span.cm-def { color: #50fa7b; }
-.cm-s-default span.cm-operator { color: #ff79c6; }
-.cm-s-default span.cm-keyword { color: #ff79c6; }
-.cm-s-default span.cm-atom { color: #bd93f9; }
-.cm-s-default span.cm-meta { color: #f8f8f2; }
-.cm-s-default span.cm-tag { color: #ff79c6; }
-.cm-s-default span.cm-attribute { color: #50fa7b; }
-.cm-s-default span.cm-qualifier { color: #50fa7b; }
-.cm-s-default span.cm-property { color: #66d9ef; }
-.cm-s-default span.cm-builtin { color: #50fa7b; }
-.cm-s-default span.cm-variable-3, .cm-s-default span.cm-type { color: #ffb86c; }]]></template>
-  <template type="public" title="Code_style_light.less" version_id="1000070" version_string="1.0.0"><![CDATA[.bbCodeCode code
-{	
-	.prism-token
+.bbCodeBlock--code.bbCodeBlock--screenLimited
+{
+	.bbCodeBlock-header
 	{
-		&.prism-comment,
-		&.prism-prolog,
-		&.prism-doctype,
-		&.prism-cdata
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		flex-wrap: wrap;
+	
+		background: xf-diminish(@xf-contentAltBg, 2%);
+		border-bottom: 1px solid @xf-borderColorFaint;		
+
+		.bbCodeBlock-title
 		{
-			color: #a50;
+			flex: 1;
+		}
+		
+		.bbCodeBlock-actions
+		{
+			display: flex;
+			padding-right: @xf-paddingLarge - @xf-paddingMedium;
+			
+			.action
+			{
+				color: @xf-textColorMuted;
+				padding: @xf-paddingMedium;
+				
+				transition: color .2s;
+				
+				&:hover, &:focus
+				{
+					cursor: pointer;
+					color: @xf-textColor;
+				}
+				
+				&:active
+				{
+					transition: color 0s;
+					color: @xf-textColorAttention;
+				}
+				
+				&.action--hidden
+				{
+					display: none;
+				}
+			}
+		}
+	}
+	
+	.bbCodeBlock-content
+	{
+		max-height: @xf-CMTV_Code_code_block_max_height;
+		
+		&::-webkit-scrollbar
+		{
+			width: 0.9em;
+			height: 0.9em;
 		}
 
-		&.prism-constant
-		{
-			color: #05a;
+		&::-webkit-scrollbar-track {
+			background: transparent;
 		}
 
-		&.prism-tag
-		{
-			color: #170;
+		&::-webkit-scrollbar-thumb
+		{		
+			background-color: fade(@xf-borderColor, 60%);
 		}
 
-		&.prism-boolean
+		&::-webkit-scrollbar-corner
 		{
-			color: #219;
+			background-color: fade(@xf-borderColor, 60%);
 		}
+	}
 
-		&.prism-symbol,
-		&.prism-atrule,
-		&.prism-keyword
+	.bbCodeBlock-grip
+	{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		height: 20px;
+		border-top: 1px solid @xf-borderColorFaint;
+		background: xf-diminish(@xf-contentAltBg, 2%);
+		
+		color: @xf-textColorMuted;
+		transition: color .2s;
+		
+		&:hover
 		{
-			color: #708;
+			cursor: ns-resize;
+			color: @xf-textColorDimmed;
 		}
-
-		&.prism-selector,
-		&.prism-function
+		
+		&.resizer--hidden
 		{
-			color: #05a;
-		}
-
-		&.prism-deleted
-		{
-			color: #d44;
-		}
-
-		&.prism-inserted
-		{
-			color: #292;
-		}
-
-		&.prism-string,
-		&.prism-attr-value
-		{
-			color: #a11;
-		}
-
-		&.prism-number
-		{
-			color: #164;
-		}
-
-		&.prism-attr-name,
-		&.prism-char,
-		&.prism-builtin
-		{
-			color: #00c;
-		}
-
-		&.prism-regex,
-		&.prism-important,
-		&.prism-variable,
-		&.prism-package
-		{
-			color: #05a;
-		}
-
-		&.prism-class-name,
-		&.prism-important,
-		&.prism-bold
-		{
-			color: #00f;
-		}
-
-		&.prism-bold
-		{
-			font-weight: bold;
-		}
-
-		&.prism-italic,
-		&.prism-constant
-		{
-			color: #05a;
-			font-style: italic;
-		}
-
-		&.prism-entity
-		{
-			cursor: help;
+			display: none;
 		}
 	}
 }]]></template>
-  <template type="public" title="Code_styles" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:css src="Code_block.less" />
-<xf:css src="Code_block_controls_menu.less" />
-
-<xf:if is="{{ property('Code_showLineNumbers') }}">
-	<xf:css src="Code_line_numbers.less" />
-</xf:if>]]></template>
 </templates>

@@ -1,1 +1,0 @@
-The languages listed here will be displayed in "Common languages" block in language selector.

@@ -1,9 +1,0 @@
-{
-    "template": "bb_code_tag_code",
-    "description": "Adding \"line-numbers\" class to <pre> tag",
-    "execution_order": 10,
-    "enabled": true,
-    "action": "str_replace",
-    "find": "<pre class=\"bbCodeCode\" dir=\"ltr\" data-xf-init=\"code-block\" data-lang=\"{{ $language ?: '' }}\"><code>{$content}</code></pre>",
-    "replace": "<xf:if is=\"{{ $config.phrase ?: phrase('code') }} == {{ phrase('code') }}\">\n\t<pre class=\"bbCodeCode line-numbers\" dir=\"ltr\" data-xf-init=\"code-block\" data-lang=\"{{ $language ?: 'code' }}\"><code class=\" language-general\">{$content}</code></pre>\n<xf:else />\n\t<pre class=\"bbCodeCode line-numbers\" dir=\"ltr\" data-xf-init=\"code-block\" data-lang=\"{{ $language ?: '' }}\"><code>{$content}</code></pre>\n</xf:if>"
-}

@@ -1,11 +1,5 @@
 {
-    "Code_codeBlockHeightDefault.json": {
-        "hash": "a35cea364635ba0fe65a825150f407c2"
-    },
-    "Code_showLineNumbers.json": {
-        "hash": "c7fd12350cfeab9ab66ec985a7c9f120"
-    },
-    "Code_style_type.json": {
-        "hash": "3f3a6d97959453c0aba35cf959059688"
+    "CMTV_Code_code_block_max_height.json": {
+        "hash": "ac0fd54f0addf50be042cb5b6de7b7f0"
     }
 }

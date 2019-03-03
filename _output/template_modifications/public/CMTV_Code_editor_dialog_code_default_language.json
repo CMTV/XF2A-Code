@@ -1,0 +1,9 @@
+{
+    "template": "editor_dialog_code",
+    "description": "Setting default language in \"Insert code\" editor dialog",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "id=\"editor_code_type\"",
+    "replace": "id=\"editor_code_type\" value=\"{$xf.options.CMTV_Code_defaultCodeLanguage}\""
+}

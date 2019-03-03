@@ -1,9 +1,0 @@
-{
-    "template": "helper_js_global",
-    "description": "Including addon scripts",
-    "execution_order": 10,
-    "enabled": true,
-    "action": "str_replace",
-    "find": "<!--XF:JS-->",
-    "replace": "$0\n\n<xf:include template=\"Code_js\" />"
-}

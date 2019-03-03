@@ -1,1 +1,0 @@
-This defines the code highlighting colors for light/dark forum styles.

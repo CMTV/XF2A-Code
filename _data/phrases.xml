@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phrases>
-  <phrase title="Code_collapse" version_id="1000070" version_string="1.0.0"><![CDATA[Collapse code]]></phrase>
-  <phrase title="Code_copied" version_id="1000070" version_string="1.0.0"><![CDATA[Copied!]]></phrase>
-  <phrase title="Code_copy_to_clipboard" version_id="1000070" version_string="1.0.0"><![CDATA[Copy to clipboard]]></phrase>
-  <phrase title="Code_editor_title" version_id="1000070" version_string="1.0.0"><![CDATA[Code block title]]></phrase>
-  <phrase title="Code_editor_title_explain" version_id="1000070" version_string="1.0.0"><![CDATA[Optional. If specified, the default code language name will be replaced with title text at code block header. For example, can be used for specifying filename.]]></phrase>
-  <phrase title="Code_expand" version_id="1000070" version_string="1.0.0"><![CDATA[Expand code]]></phrase>
-  <phrase title="option.Code_commonCodeLanguages" version_id="1000070" version_string="1.0.0"><![CDATA[Common code BB code block languages]]></phrase>
-  <phrase title="option.Code_defaultCodeLanguage" version_id="1000070" version_string="1.0.0"><![CDATA[Default code language]]></phrase>
-  <phrase title="option_explain.Code_commonCodeLanguages" version_id="1000070" version_string="1.0.0"><![CDATA[The languages listed here will be displayed in "Common languages" block in language selector.]]></phrase>
-  <phrase title="option_explain.Code_defaultCodeLanguage" version_id="1000070" version_string="1.0.0"><![CDATA[This language will be automatically selected when "Insert code" dialog opens.]]></phrase>
-  <phrase title="style_prop.Code_codeBlockHeightDefault" version_id="1000070" version_string="1.0.0"><![CDATA[Code block default height]]></phrase>
-  <phrase title="style_prop.Code_showLineNumbers" version_id="1000070" version_string="1.0.0"><![CDATA[Show line numbers]]></phrase>
-  <phrase title="style_prop.Code_style_type" version_id="1000070" version_string="1.0.0"><![CDATA[Code style type]]></phrase>
-  <phrase title="style_prop_desc.Code_codeBlockHeightDefault" version_id="1000070" version_string="1.0.0"><![CDATA[]]></phrase>
-  <phrase title="style_prop_desc.Code_showLineNumbers" version_id="1000070" version_string="1.0.0"><![CDATA[If enabled, code line numbers will be showing at the left of code block.]]></phrase>
-  <phrase title="style_prop_desc.Code_style_type" version_id="1000070" version_string="1.0.0"><![CDATA[This defines the code highlighting colors for light/dark forum styles.]]></phrase>
-  <phrase title="style_prop_group.Code" version_id="1000070" version_string="1.0.0"><![CDATA[Code]]></phrase>
-  <phrase title="style_prop_group_desc.Code" version_id="1000070" version_string="1.0.0"><![CDATA[Code blocks styling properties and options.]]></phrase>
+  <phrase title="CMTV_Code_code_block_highlight" version_id="2010070" version_string="2.1.0"><![CDATA[Highlight lines]]></phrase>
+  <phrase title="CMTV_Code_code_block_highlight_explain" version_id="2010070" version_string="2.1.0"><![CDATA[Optional. Line numbers you want to highlight. For example, "2, 4-6" will highlight lines 2, 4, 5 and 6.]]></phrase>
+  <phrase title="CMTV_Code_code_block_title" version_id="2010070" version_string="2.1.0"><![CDATA[Code block title]]></phrase>
+  <phrase title="CMTV_Code_code_block_title_explain" version_id="2010070" version_string="2.1.0"><![CDATA[Optional. If specified, the default code language name will be replaced with title text at code block header. For example, can be used for specifying filename.]]></phrase>
+  <phrase title="CMTV_Code_collapse" version_id="2010070" version_string="2.1.0"><![CDATA[Collapse]]></phrase>
+  <phrase title="CMTV_Code_copied" version_id="2010070" version_string="2.1.0"><![CDATA[Code copied to clipboard.]]></phrase>
+  <phrase title="CMTV_Code_copy" version_id="2010070" version_string="2.1.0"><![CDATA[Copy]]></phrase>
+  <phrase title="CMTV_Code_expand" version_id="2010070" version_string="2.1.0"><![CDATA[Expand]]></phrase>
+  <phrase title="option.CMTV_Code_backComp" version_id="2010070" version_string="2.1.0"><![CDATA[Code addon backwards compatibility]]></phrase>
+  <phrase title="option.CMTV_Code_commonLanguages" version_id="2010070" version_string="2.1.0"><![CDATA[Common code languages]]></phrase>
+  <phrase title="option.CMTV_Code_defaultCodeLanguage" version_id="2010070" version_string="2.1.0"><![CDATA[Default code language]]></phrase>
+  <phrase title="option.CMTV_Code_lineHighlight_enabled" version_id="2010070" version_string="2.1.0"><![CDATA[Line highlighting]]></phrase>
+  <phrase title="option.CMTV_Code_lineNumbers_enabled" version_id="2010070" version_string="2.1.0"><![CDATA[Code line numbers]]></phrase>
+  <phrase title="option_explain.CMTV_Code_backComp" version_id="2010070" version_string="2.1.0"><![CDATA[If enabled, code blocks from old addon versions <code>[code=title|lang]...[/code]</code> will be treated as <code>[code lang="lang" title="title"]...[/code]</code>.]]></phrase>
+  <phrase title="option_explain.CMTV_Code_commonLanguages" version_id="2010070" version_string="2.1.0"><![CDATA[The languages defined here will be shown in "Common languages" block in "Insert code" editor dialog.]]></phrase>
+  <phrase title="option_explain.CMTV_Code_defaultCodeLanguage" version_id="2010070" version_string="2.1.0"><![CDATA[This language will be selected by default in "Inert code" editor dialog.]]></phrase>
+  <phrase title="option_explain.CMTV_Code_lineHighlight_enabled" version_id="2010070" version_string="2.1.0"><![CDATA[If enabled, users will be able to highlight specific lines and/or line ranges in code blocks. <a href="https://prismjs.com/plugins/line-highlight/" target="_blank">Plugin page</a>]]></phrase>
+  <phrase title="option_explain.CMTV_Code_lineNumbers_enabled" version_id="2010070" version_string="2.1.0"><![CDATA[If enabled, shows line number at the beginning of lines in code blocks. <a href="https://prismjs.com/plugins/line-numbers/" target="_blank">Plugin page</a>]]></phrase>
+  <phrase title="style_prop.CMTV_Code_code_block_max_height" version_id="2010070" version_string="2.1.0"><![CDATA[Code block max height]]></phrase>
+  <phrase title="style_prop_desc.CMTV_Code_code_block_max_height" version_id="2010070" version_string="2.1.0"><![CDATA[]]></phrase>
+  <phrase title="style_prop_vgroup.CMTV_Code_bbCodeCodeBlock" version_id="2010070" version_string="2.1.0"><![CDATA[BB code code block]]></phrase>
 </phrases>

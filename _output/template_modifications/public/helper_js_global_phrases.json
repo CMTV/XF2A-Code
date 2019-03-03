@@ -1,9 +1,0 @@
-{
-    "template": "helper_js_global",
-    "description": "Registering addon phrases",
-    "execution_order": 10,
-    "enabled": true,
-    "action": "str_replace",
-    "find": "<!--[XF:js_global:xf_phrase_start]-->",
-    "replace": "$0\n\nCode_copied: \"{{ phrase('Code_copied') }}\","
-}

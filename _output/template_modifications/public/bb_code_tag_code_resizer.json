@@ -1,9 +1,0 @@
-{
-    "template": "bb_code_tag_code",
-    "description": "Adding resizer bar below code blocker",
-    "execution_order": 10,
-    "enabled": true,
-    "action": "preg_replace",
-    "find": "/<div class=\"bbCodeBlock-content\" dir=\"ltr\">[\\s\\S]+?<\\/div>/m",
-    "replace": "$0\n\n<xf:macro template=\"Code_block_macro\" name=\"resizer_bar\" />"
-}

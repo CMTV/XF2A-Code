@@ -1,13 +1,11 @@
 {
     "additional_files": [
-        "js/Code"
+        "js/CMTV/Code"
     ],
-    
     "minify": [
-        "js/Code/code-block.js",
-        "js/Code/code-block-buttons.js",
-        "js/Code/code-block-copy.js",
-        "js/Code/code-block-resizer.js",
-        "js/Code/insert-code-editor.js"
+        "js/CMTV/Code/code-block.js",
+        "js/CMTV/Code/code-block-actions.js",
+        "js/CMTV/Code/code-block-resizer.js",
+        "js/CMTV/Code/editor-dialog-code.js"
     ]
 }

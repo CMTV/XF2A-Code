@@ -1,42 +1,17 @@
 {
-    "public/Code_block.less": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "1ef47ad481bc6d970c6164188ea50fd0"
+    "public/CMTV_Code_Prism_plugins.less": {
+        "version_id": 2010070,
+        "version_string": "2.1.0",
+        "hash": "58aa5ee2a57d35421aaca8fa8ac17ce3"
     },
-    "public/Code_block_controls_menu.less": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "b6f89641ed49ea76b90b34851b005362"
+    "public/CMTV_Code_bb_code_tag_code.html": {
+        "version_id": 2010070,
+        "version_string": "2.1.0",
+        "hash": "dd058f34f6012655c13cafe2a8e611e2"
     },
-    "public/Code_block_macro.html": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "73dacea81072a0ae42a4bdf0fa8a2b66"
-    },
-    "public/Code_js.html": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "36ede2d36ca667962f658a434f38d0bb"
-    },
-    "public/Code_line_numbers.less": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "c9b6734b0457eb0cd3d4823c0203880f"
-    },
-    "public/Code_style_dark.less": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "f76960f5cc2166b979781c0063496f8d"
-    },
-    "public/Code_style_light.less": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "aed20b637903aa3c7e84879a31962af2"
-    },
-    "public/Code_styles.html": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "19253ce9ef8fed34cc8ea83c1cf15ca7"
+    "public/CMTV_Code_code_block.less": {
+        "version_id": 2010070,
+        "version_string": "2.1.0",
+        "hash": "b6e9cf7f43fbc0603166f431ea4f6211"
     }
 }

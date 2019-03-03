@@ -1,6 +1,0 @@
-{
-    "from_class": "XF\\Data\\CodeLanguage",
-    "to_class": "Code\\XF\\Data\\CodeLanguage",
-    "execute_order": 10,
-    "active": true
-}

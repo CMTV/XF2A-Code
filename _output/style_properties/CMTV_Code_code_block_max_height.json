@@ -1,0 +1,13 @@
+{
+    "group_name": "bbCode",
+    "title": "Code block max height",
+    "description": "",
+    "property_type": "value",
+    "css_components": [],
+    "value_type": "unit",
+    "value_parameters": "px",
+    "depends_on": "",
+    "value_group": "CMTV_Code_bbCodeCodeBlock",
+    "property_value": "300px",
+    "display_order": 200
+}

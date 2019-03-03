@@ -1,0 +1,9 @@
+{
+    "template": "editor",
+    "description": "Extended code editor dialog",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<!--[XF:include_js]-->",
+    "replace": "<xf:js src=\"CMTV/Code/editor-dialog-code.js\" min=\"1\" addon=\"CMTV/Code\" />\n\n$0"
+}

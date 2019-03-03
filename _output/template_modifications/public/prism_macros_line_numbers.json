@@ -1,9 +1,0 @@
-{
-    "template": "prism_macros",
-    "description": "Adding \"Line numbers\" PrismJS addon",
-    "execution_order": 10,
-    "enabled": true,
-    "action": "str_replace",
-    "find": "<xf:js prod=\"xf/code_block-compiled.js\" dev=\"vendor/prism/prism.min.js, xf/code_block.js\" />",
-    "replace": "$0\n\n<xf:if is=\"{{ property('Code_showLineNumbers') }}\">\n\t<xf:js src=\"Code/PrismJS-plugins/line-numbers.js\" addon=\"Code\" />\n</xf:if>"
-}

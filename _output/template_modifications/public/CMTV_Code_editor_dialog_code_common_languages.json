@@ -1,0 +1,9 @@
+{
+    "template": "editor_dialog_code",
+    "description": "Displaying custom common languages from ACP option",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/(<xf:optgroup label=\"{{ phrase\\('common_languages'\\) }}\">)([\\S\\s]+?)(<\\/xf:optgroup>)/",
+    "replace": "$1\n\n<xf:foreach loop=\"$commonLanguages\" value=\"$languageKey\">\n\t<xf:option value=\"{$languageKey}\">{$languages.{$languageKey}.phrase}</xf:option>\n</xf:foreach>\n\n$3"
+}

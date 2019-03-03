@@ -1,0 +1,9 @@
+{
+    "template": "editor_dialog_code",
+    "description": "Adding \"Code block title\" and \"Highlight lines\" text fields",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<div class=\"block-body\" data-xf-init=\"code-editor-switcher-container\">",
+    "replace": "$0\n\n<xf:textboxrow id=\"editor_code_title\" \n\t\t\t   label=\"{{ phrase('CMTV_Code_code_block_title') }}\" \n\t\t\t   explain=\"{{ phrase('CMTV_Code_code_block_title_explain') }}\" />\n\n<xf:textboxrow id=\"editor_code_highlight\" \n\t\t\t   label=\"{{ phrase('CMTV_Code_code_block_highlight') }}\" \n\t\t\t   explain=\"{{ phrase('CMTV_Code_code_block_highlight_explain') }}\" />"
+}

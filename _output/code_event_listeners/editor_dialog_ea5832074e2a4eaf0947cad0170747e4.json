@@ -1,0 +1,9 @@
+{
+    "event_id": "editor_dialog",
+    "execute_order": 10,
+    "callback_class": "CMTV\\Code\\EventsListener",
+    "callback_method": "commonLanguages",
+    "active": true,
+    "hint": "code",
+    "description": "Adding array of common languages to \"Insert code\" dialog params"
+}

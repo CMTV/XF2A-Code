@@ -1,9 +1,0 @@
-{
-    "template": "helper_js_global",
-    "description": "Including addon styles",
-    "execution_order": 10,
-    "enabled": true,
-    "action": "str_replace",
-    "find": "<!--XF:CSS-->",
-    "replace": "$0\n\n<xf:include template=\"Code_styles\" />"
-}

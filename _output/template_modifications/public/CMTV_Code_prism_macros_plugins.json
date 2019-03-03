@@ -1,0 +1,9 @@
+{
+    "template": "prism_macros",
+    "description": "Including Prism plugins",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "</xf:macro>",
+    "replace": "<xf:css src=\"CMTV_Code_Prism_plugins.less\" />\n\n<xf:if is=\"$xf.options.CMTV_Code_lineNumbers_enabled\">\n\t<xf:js src=\"CMTV/Code/vendor/prism-plugins/line-numbers.min.js\" addon=\"CMTV/Code\" />\n</xf:if>\n\n<xf:if is=\"$xf.options.CMTV_Code_lineHighlight_enabled\">\n\t<xf:js src=\"CMTV/Code/vendor/prism-plugins/line-highlight.min.js\" addon=\"CMTV/Code\" />\n</xf:if>\n\n$0"
+}

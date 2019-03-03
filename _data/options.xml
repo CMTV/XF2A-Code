@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <options>
-  <option option_id="Code_commonCodeLanguages" edit_format="textbox" data_type="string">
+  <option option_id="CMTV_Code_backComp" edit_format="onoff" data_type="boolean">
+    <default_value>0</default_value>
+    <relation group_id="messageOptions" display_order="860"/>
+  </option>
+  <option option_id="CMTV_Code_commonLanguages" edit_format="textbox" data_type="string">
     <default_value>css
 html
 javascript
@@ -8,8 +12,16 @@ php</default_value>
     <edit_format_params>rows=5</edit_format_params>
     <relation group_id="messageOptions" display_order="820"/>
   </option>
-  <option option_id="Code_defaultCodeLanguage" edit_format="textbox" data_type="string">
+  <option option_id="CMTV_Code_defaultCodeLanguage" edit_format="textbox" data_type="string">
     <default_value></default_value>
     <relation group_id="messageOptions" display_order="830"/>
+  </option>
+  <option option_id="CMTV_Code_lineHighlight_enabled" edit_format="onoff" data_type="boolean">
+    <default_value>1</default_value>
+    <relation group_id="messageOptions" display_order="850"/>
+  </option>
+  <option option_id="CMTV_Code_lineNumbers_enabled" edit_format="onoff" data_type="boolean">
+    <default_value>1</default_value>
+    <relation group_id="messageOptions" display_order="840"/>
   </option>
 </options>

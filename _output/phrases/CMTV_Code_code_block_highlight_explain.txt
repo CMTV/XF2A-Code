@@ -1,0 +1,1 @@
+Optional. Line numbers you want to highlight. For example, "2, 4-6" will highlight lines 2, 4, 5 and 6.

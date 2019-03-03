@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class_extensions>
-  <extension from_class="XF\BbCode\Renderer\Html" to_class="Code\XF\BbCode\Renderer\Html" execute_order="10" active="1"/>
-  <extension from_class="XF\Data\CodeLanguage" to_class="Code\XF\Data\CodeLanguage" execute_order="10" active="1"/>
+  <extension from_class="XF\BbCode\Renderer\Html" to_class="CMTV\Code\XF\BbCode\Renderer\Html" execute_order="10" active="1"/>
+  <extension from_class="XF\BbCode\RuleSet" to_class="CMTV\Code\XF\BbCode\RuleSet" execute_order="10" active="1"/>
 </class_extensions>
