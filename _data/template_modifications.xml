@@ -22,7 +22,7 @@ $3]]></replace>
   </modification>
   <modification type="public" template="editor_dialog_code" modification_key="CMTV_Code_editor_dialog_code_default_language" description="Setting default language in &quot;Insert code&quot; editor dialog" execution_order="10" enabled="1" action="str_replace">
     <find><![CDATA[id="editor_code_type"]]></find>
-    <replace><![CDATA[id="editor_code_type" value="{$xf.options.CMTV_Code_defaultCodeLanguage}"]]></replace>
+    <replace><![CDATA[id="editor_code_type" value="{$xf.options.CMTV_Code_defaultInsertCodeLanguage}"]]></replace>
   </modification>
   <modification type="public" template="editor_dialog_code" modification_key="CMTV_Code_editor_dialog_code_title" description="Adding &quot;Code block title&quot; and &quot;Highlight lines&quot; text fields" execution_order="10" enabled="1" action="str_replace">
     <find><![CDATA[<div class="block-body" data-xf-init="code-editor-switcher-container">]]></find>

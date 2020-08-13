@@ -5,5 +5,5 @@
     "enabled": true,
     "action": "str_replace",
     "find": "id=\"editor_code_type\"",
-    "replace": "id=\"editor_code_type\" value=\"{$xf.options.CMTV_Code_defaultCodeLanguage}\""
+    "replace": "id=\"editor_code_type\" value=\"{$xf.options.CMTV_Code_defaultInsertCodeLanguage}\""
 }

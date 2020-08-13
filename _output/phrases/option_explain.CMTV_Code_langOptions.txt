@@ -1,0 +1,5 @@
+JSON object where keys are code languages names and values are options objects. Example (setting 'stex' CodeMirror mode for 'latex' language): <pre><code>{
+    "latex": {
+        "modes": "stex"
+    }
+}</code></pre>

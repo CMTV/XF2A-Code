@@ -1,1 +1,0 @@
-If enabled, shows line number at the beginning of lines in code blocks. <a href="https://prismjs.com/plugins/line-numbers/" target="_blank">Plugin page</a>

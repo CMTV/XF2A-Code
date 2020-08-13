@@ -1,23 +1,5 @@
 {
-    "public/CMTV_Code_bb_code_tag_code.json": {
-        "hash": "83e443467fe8955495acd67d41d31ebc"
-    },
-    "public/CMTV_Code_editor.json": {
-        "hash": "05140109759b9b5fc27b2d1ba889e9c0"
-    },
-    "public/CMTV_Code_editor_dialog_code_common_languages.json": {
-        "hash": "a970996ad514f772c863a86ea9392a5d"
-    },
     "public/CMTV_Code_editor_dialog_code_default_language.json": {
-        "hash": "4325ecc81f6b8cb4f586f6db4a2e8e1e"
-    },
-    "public/CMTV_Code_editor_dialog_code_title.json": {
-        "hash": "39c3b0d60a852b14fd4b13c8433fb5ef"
-    },
-    "public/CMTV_Code_helper_js_global_phrase.json": {
-        "hash": "ff1967a1cfb1b73e6ee8253a6f105976"
-    },
-    "public/CMTV_Code_prism_macros_plugins.json": {
-        "hash": "8f2353dfe5ae0d21be282fb0672f5637"
+        "hash": "ce37eb747f26c1372cacdb9ed4aca1d1"
     }
 }

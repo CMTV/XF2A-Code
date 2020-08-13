@@ -29,12 +29,12 @@ class Html extends XFCP_Html
             }
             else
             {
-                return $this->CMTV_Code_getRenderedCode([], parent::renderTagCode($children, $option, $tag, $options));
+                $language = !empty($option) ? $option : \XF::options()->CMTV_Code_defaultCodeLanguage;
+                return $this->CMTV_Code_getRenderedCode([], parent::renderTagCode($children, $language, $tag, $options));
             }
         }
 
-        $language = $option['lang'];
-        unset($option['lang']);
+        $language = isset($option['lang']) ? $option['lang'] : \XF::options()->CMTV_Code_defaultCodeLanguage;
 
         return $this->CMTV_Code_getRenderedCode($option, parent::renderTagCode($children, $language, $tag, $options));
     }

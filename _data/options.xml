@@ -14,7 +14,16 @@ php</default_value>
   </option>
   <option option_id="CMTV_Code_defaultCodeLanguage" edit_format="textbox" data_type="string">
     <default_value></default_value>
+    <relation group_id="messageOptions" display_order="831"/>
+  </option>
+  <option option_id="CMTV_Code_defaultInsertCodeLanguage" edit_format="textbox" data_type="string">
+    <default_value></default_value>
     <relation group_id="messageOptions" display_order="830"/>
+  </option>
+  <option option_id="CMTV_Code_langOptions" edit_format="template" data_type="string">
+    <default_value></default_value>
+    <edit_format_params>CMTV_Code_lang_options_option</edit_format_params>
+    <relation group_id="messageOptions" display_order="835"/>
   </option>
   <option option_id="CMTV_Code_lineHighlight_enabled" edit_format="onoff" data_type="boolean">
     <default_value>1</default_value>

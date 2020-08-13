@@ -10,12 +10,20 @@
   <phrase title="CMTV_Code_expand" version_id="2010070" version_string="2.1.0"><![CDATA[Expand]]></phrase>
   <phrase title="option.CMTV_Code_backComp" version_id="2010070" version_string="2.1.0"><![CDATA[Code addon backwards compatibility]]></phrase>
   <phrase title="option.CMTV_Code_commonLanguages" version_id="2010070" version_string="2.1.0"><![CDATA[Common code languages]]></phrase>
-  <phrase title="option.CMTV_Code_defaultCodeLanguage" version_id="2010070" version_string="2.1.0"><![CDATA[Default code language]]></phrase>
+  <phrase title="option.CMTV_Code_defaultCodeLanguage" version_id="2020070" version_string="2.2.0"><![CDATA[Default code language]]></phrase>
+  <phrase title="option.CMTV_Code_defaultInsertCodeLanguage" version_id="2020070" version_string="2.2.0"><![CDATA[Default "Insert code" language]]></phrase>
+  <phrase title="option.CMTV_Code_langOptions" version_id="2010270" version_string="2.1.2"><![CDATA[Code language options]]></phrase>
   <phrase title="option.CMTV_Code_lineHighlight_enabled" version_id="2010070" version_string="2.1.0"><![CDATA[Line highlighting]]></phrase>
   <phrase title="option.CMTV_Code_lineNumbers_enabled" version_id="2010070" version_string="2.1.0"><![CDATA[Code line numbers]]></phrase>
   <phrase title="option_explain.CMTV_Code_backComp" version_id="2010070" version_string="2.1.0"><![CDATA[If enabled, code blocks from old addon versions <code>[code=title|lang]...[/code]</code> will be treated as <code>[code lang="lang" title="title"]...[/code]</code>.]]></phrase>
   <phrase title="option_explain.CMTV_Code_commonLanguages" version_id="2010070" version_string="2.1.0"><![CDATA[The languages defined here will be shown in "Common languages" block in "Insert code" editor dialog.]]></phrase>
-  <phrase title="option_explain.CMTV_Code_defaultCodeLanguage" version_id="2010070" version_string="2.1.0"><![CDATA[This language will be selected by default in "Inert code" editor dialog.]]></phrase>
+  <phrase title="option_explain.CMTV_Code_defaultCodeLanguage" version_id="2020070" version_string="2.2.0"><![CDATA[Default code language for all code blocks on forum with no manually code language specified.]]></phrase>
+  <phrase title="option_explain.CMTV_Code_defaultInsertCodeLanguage" version_id="2020070" version_string="2.2.0"><![CDATA[This language will be selected by default in "Inert code" editor dialog.]]></phrase>
+  <phrase title="option_explain.CMTV_Code_langOptions" version_id="2010270" version_string="2.1.2"><![CDATA[JSON object where keys are code languages names and values are options objects. Example (setting 'stex' CodeMirror mode for 'latex' language): <pre><code>{
+    "latex": {
+        "modes": "stex"
+    }
+}</code></pre>]]></phrase>
   <phrase title="option_explain.CMTV_Code_lineHighlight_enabled" version_id="2010070" version_string="2.1.0"><![CDATA[If enabled, users will be able to highlight specific lines and/or line ranges in code blocks. <a href="https://prismjs.com/plugins/line-highlight/" target="_blank">Plugin page</a>]]></phrase>
   <phrase title="option_explain.CMTV_Code_lineNumbers_enabled" version_id="2010070" version_string="2.1.0"><![CDATA[If enabled, shows line number at the beginning of lines in code blocks. <a href="https://prismjs.com/plugins/line-numbers/" target="_blank">Plugin page</a>]]></phrase>
   <phrase title="style_prop.CMTV_Code_code_block_max_height" version_id="2010070" version_string="2.1.0"><![CDATA[Code block max height]]></phrase>

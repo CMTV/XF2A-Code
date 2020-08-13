@@ -1,0 +1,1 @@
+This language will be selected by default in "Inert code" editor dialog.

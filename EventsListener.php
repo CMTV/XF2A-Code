@@ -24,4 +24,20 @@ class EventsListener
 
         $data['params']['commonLanguages'] = $commonLanguages;
     }
+
+    public static function codeLanguages(array &$languages)
+    {
+        $langOptions = json_decode(\XF::options()->CMTV_Code_langOptions, true);
+
+        if ($langOptions === null)
+            return;
+
+        foreach ($langOptions as $lang => $options)
+        {
+            if ($languages[$lang] === null) continue;
+            $languages[$lang] = array_merge_recursive($languages[$lang], $options);
+        }
+
+        //print_r($languages['latex']['mode']);
+    }
 }

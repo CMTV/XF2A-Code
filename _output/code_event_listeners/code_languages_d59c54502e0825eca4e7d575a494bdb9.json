@@ -1,0 +1,9 @@
+{
+    "event_id": "code_languages",
+    "execute_order": 10,
+    "callback_class": "CMTV\\Code\\EventsListener",
+    "callback_method": "codeLanguages",
+    "active": true,
+    "hint": "",
+    "description": "Custom modes for CodeMirror"
+}

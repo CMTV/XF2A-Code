@@ -1,17 +1,7 @@
 {
-    "public/CMTV_Code_Prism_plugins.less": {
-        "version_id": 2010070,
-        "version_string": "2.1.0",
-        "hash": "58aa5ee2a57d35421aaca8fa8ac17ce3"
-    },
-    "public/CMTV_Code_bb_code_tag_code.html": {
-        "version_id": 2010070,
-        "version_string": "2.1.0",
-        "hash": "dd058f34f6012655c13cafe2a8e611e2"
-    },
-    "public/CMTV_Code_code_block.less": {
-        "version_id": 2010070,
-        "version_string": "2.1.0",
-        "hash": "b6e9cf7f43fbc0603166f431ea4f6211"
+    "admin/CMTV_Code_lang_options_option.html": {
+        "version_id": 2010270,
+        "version_string": "2.1.2",
+        "hash": "30e4dcce4b576468822c195d8d001a06"
     }
 }

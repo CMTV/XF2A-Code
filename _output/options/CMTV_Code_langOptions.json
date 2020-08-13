@@ -1,6 +1,6 @@
 {
-    "edit_format": "textbox",
-    "edit_format_params": "",
+    "edit_format": "template",
+    "edit_format_params": "CMTV_Code_lang_options_option",
     "data_type": "string",
     "sub_options": [],
     "validation_class": "",
@@ -8,6 +8,6 @@
     "advanced": false,
     "default_value": "",
     "relations": {
-        "messageOptions": 831
+        "messageOptions": 835
     }
 }

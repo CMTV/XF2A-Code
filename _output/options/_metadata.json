@@ -1,17 +1,11 @@
 {
-    "CMTV_Code_backComp.json": {
-        "hash": "9dfb61117f14bfb3463a23f2bb4e96fb"
-    },
-    "CMTV_Code_commonLanguages.json": {
-        "hash": "eb4b97d1d9ea08c23cee370480e80642"
-    },
     "CMTV_Code_defaultCodeLanguage.json": {
-        "hash": "4e270c387d80b37a5b3fec3fc3f9e04a"
+        "hash": "bf19036af0ece2892f0d6ba8bdbab1bf"
     },
-    "CMTV_Code_lineHighlight_enabled.json": {
-        "hash": "f85dbe90de3e9741f4631954f7632649"
+    "CMTV_Code_defaultInsertCodeLanguage.json": {
+        "hash": "323505546bbdf1b5d389f59589a5d3c3"
     },
-    "CMTV_Code_lineNumbers_enabled.json": {
-        "hash": "eeb8578d942aa97f8dcc69f0810a9d9e"
+    "CMTV_Code_langOptions.json": {
+        "hash": "1e4deee59e1734d738cb1a11285cb9c4"
     }
 }

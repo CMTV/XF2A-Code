@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates>
+  <template type="admin" title="CMTV_Code_lang_options_option" version_id="2010270" version_string="2.1.2"><![CDATA[<xf:formrow rowtype="input"
+			label="{$option.title}"
+			hint="{$hintHtml}"
+			explain="{$explainHtml}"
+			html="{$listedHtml}"
+			rowclass="{$rowClass}">
+
+	<xf:codeeditor
+					  mode="json"
+					  name="{$inputName}"
+					  value="{$option.option_value}"
+					  class="codeEditor--autoSize"
+					  rowtype="fullWidth noLabel" />
+</xf:formrow>]]></template>
   <template type="public" title="CMTV_Code_Prism_plugins.less" version_id="2010070" version_string="2.1.0"><![CDATA[// ############################ Line numbers ############################
 
 pre[class*="language-"].line-numbers {

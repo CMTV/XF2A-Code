@@ -1,0 +1,14 @@
+<xf:formrow rowtype="input"
+			label="{$option.title}"
+			hint="{$hintHtml}"
+			explain="{$explainHtml}"
+			html="{$listedHtml}"
+			rowclass="{$rowClass}">
+
+	<xf:codeeditor
+					  mode="json"
+					  name="{$inputName}"
+					  value="{$option.option_value}"
+					  class="codeEditor--autoSize"
+					  rowtype="fullWidth noLabel" />
+</xf:formrow>

@@ -1,1 +1,1 @@
-This language will be selected by default in "Inert code" editor dialog.
+Default code language for all code blocks on forum with no manually code language specified.
